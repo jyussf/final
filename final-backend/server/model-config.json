@@ -34,5 +34,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "appUsers": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "entryLog": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

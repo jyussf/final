@@ -16,8 +16,8 @@ import { entryLog } from '../../models/entryLog';
   templateUrl: 'entry.html',
 })
 export class EntryPage {
-  //historyEntry: any = [];
-  entry : entryLog;
+  historyEntry: any = [];
+  entry : any = [];
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -28,14 +28,15 @@ export class EntryPage {
     }
 
   newEntry(form) {
-    if(form.invalid) {
-      return alert("Please fill in all of the required fields.");
+   if(form.invalid) {
+     return alert("Please fill in all of the required fields.");
     } 
     //entry : any = JSON.parse(window.localStorage.getItem("entry")) || [];
-    //entry.push(this.historyEntry);
-    //window.localStorage.setItem("entry", JSON.stringify(entry));
+    
+   // window.localStorage.setItem("entry", JSON.stringify(entry));
     this.navCtrl.setRoot(PreviousEntryPage, {
       "entry": this.entry
+      //entry.push(this.historyEntry)
     });
   }
 }

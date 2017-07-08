@@ -15,7 +15,7 @@ import { SummaryPage } from '../summary/summary';
   templateUrl: 'previous-entry.html',
 })
 export class PreviousEntryPage {
-  entry: any = {};
+  entry: any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

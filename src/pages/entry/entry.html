@@ -15,19 +15,18 @@
 <form #entryForm="ngForm" (ngSubmit)="newEntry(entryForm)" novalidate>
  
 <ion-item>
-    <ion-label color="primary" floating>Description (rent, groceries, etc)</ion-label>
+    <ion-label color="primary" stacked>Description (rent, groceries, etc)</ion-label>
     <ion-input name = "description" type= "text" [(ngModel)] ="entry.description" required></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-label color="primary" floating>Amount Spent</ion-label>
+    <ion-label color="primary" stacked>Amount Spent</ion-label>
     <ion-input name = "amount" type="number" [(ngModel)]="entry.amount" required></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-label color ="primary" floating>Date Spent</ion-label>
-    <ion-datetime displayFormat="MMM DD, YYYY"></ion-datetime>
-    <ion-input name ="dateSpent" [(ngModel)]="entry.dateSpent" required></ion-input>
+    <ion-label color ="primary" stacked>Date Spent</ion-label>
+    <ion-input name ="dateSpent" type ="Date" [(ngModel)]="entry.dateSpent" required></ion-input>
   </ion-item>
 
   <button ion-button type="submit" class="button-block">
